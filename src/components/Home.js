@@ -19,7 +19,7 @@ function Home() {
           showStatus={false}
           dynamicHeight={true}
           stopOnHover={true}
-          interval={5000} // Cambia el intervalo a 5 segundos
+          interval={500} // Cambia el intervalo a 5 segundos
           className="carousel"
         >
           <div className="carousel-item">

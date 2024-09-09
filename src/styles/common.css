@@ -1,36 +1,101 @@
+/* src/styles/register.css */
 .register-container {
-  width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Centra el texto de las etiquetas */
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.register-input {
+  width: calc(100% - 40px); /* Ajusta el ancho para dejar espacio para el icono */
+  padding: 10px 10px 10px 40px;
   border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
-button {
+.password-group {
+  position: relative;
+}
+
+.show-password-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.check-icon {
+  color: green;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error-icon {
+  color: red;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.register-button, .login-button {
   width: 100%;
-  padding: 1rem;
-  background-color: #28a745;
-  color: white;
+  padding: 10px;
   border: none;
   border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #218838;
+.register-button:hover, .login-button:hover {
+  background-color: #0056b3;
 }
 
-.error {
-  color: red;
-  margin-top: 0.5rem;
+.login-link {
+  text-align: center;
+  margin-top: 10px;
 }

@@ -1,6 +1,7 @@
-// src/components/RegisteredUsers.js
 import React, { useState } from 'react';
 import '../styles/registered-users.css';
+import { FaEdit, FaTrash, FaPrint } from 'react-icons/fa';
+import { MdEmail, MdLocationCity, MdFlag, MdPhone, MdPinDrop, MdCardMembership, MdPerson, MdCake } from 'react-icons/md';
 
 function RegisteredUsers() {
   const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')) || []);
@@ -57,7 +58,7 @@ function RegisteredUsers() {
               {editingUserIndex === index ? (
                 <div className="edit-form">
                   <label>
-                    Email:
+                    <MdEmail /> Email:
                     <input
                       type="email"
                       value={editedUserDetails.email}
@@ -65,7 +66,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    City:
+                    <MdLocationCity /> City:
                     <input
                       type="text"
                       value={editedUserDetails.city}
@@ -73,7 +74,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    Country:
+                    <MdFlag /> Country:
                     <input
                       type="text"
                       value={editedUserDetails.country}
@@ -81,7 +82,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    Phone:
+                    <MdPhone /> Phone:
                     <input
                       type="text"
                       value={editedUserDetails.phone}
@@ -89,7 +90,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    Postal Code:
+                    <MdPinDrop /> Postal Code:
                     <input
                       type="text"
                       value={editedUserDetails.postalCode}
@@ -97,7 +98,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    ID Number:
+                    <MdCardMembership /> ID Number:
                     <input
                       type="text"
                       value={editedUserDetails.documentNumber}
@@ -105,7 +106,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    Gender:
+                    <MdPerson /> Gender:
                     <input
                       type="text"
                       value={editedUserDetails.gender}
@@ -113,7 +114,7 @@ function RegisteredUsers() {
                     />
                   </label>
                   <label>
-                    Birth Date:
+                    <MdCake /> Birth Date:
                     <input
                       type="date"
                       value={editedUserDetails.birthDate}
@@ -125,18 +126,18 @@ function RegisteredUsers() {
                 </div>
               ) : (
                 <>
-                  <p><strong>Email:</strong> {user.email}</p>
-                  <p><strong>City:</strong> {user.city}</p>
-                  <p><strong>Country:</strong> {user.country}</p>
-                  <p><strong>Phone:</strong> {user.phone}</p>
-                  <p><strong>Postal Code:</strong> {user.postalCode}</p>
-                  <p><strong>ID Number:</strong> {user.documentNumber}</p>
-                  <p><strong>Gender:</strong> {user.gender}</p>
-                  <p><strong>Birth Date:</strong> {user.birthDate}</p>
+                  <p><MdEmail /> <strong>Email:</strong> {user.email}</p>
+                  <p><MdLocationCity /> <strong>City:</strong> {user.city}</p>
+                  <p><MdFlag /> <strong>Country:</strong> {user.country}</p>
+                  <p><MdPhone /> <strong>Phone:</strong> {user.phone}</p>
+                  <p><MdPinDrop /> <strong>Postal Code:</strong> {user.postalCode}</p>
+                  <p><MdCardMembership /> <strong>ID Number:</strong> {user.documentNumber}</p>
+                  <p><MdPerson /> <strong>Gender:</strong> {user.gender}</p>
+                  <p><MdCake /> <strong>Birth Date:</strong> {user.birthDate}</p>
                   <p><strong>Registration Time:</strong> {user.registrationTime}</p>
-                  <button onClick={() => handleEdit(index)} className="edit-button">Edit</button>
-                  <button onClick={() => handleDelete(index)} className="delete-button">Delete</button>
-                  <button onClick={() => handlePrint(user)} className="print-button">Print</button>
+                  <button onClick={() => handleEdit(index)} className="edit-button"><FaEdit /> Edit</button>
+                  <button onClick={() => handleDelete(index)} className="delete-button"><FaTrash /> Delete</button>
+                  <button onClick={() => handlePrint(user)} className="print-button"><FaPrint /> Print</button>
                 </>
               )}
             </div>
