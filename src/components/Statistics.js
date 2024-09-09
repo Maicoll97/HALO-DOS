@@ -48,7 +48,7 @@ function Statistics() {
           const json = XLSX.utils.sheet_to_json(worksheet);
 
           if (json.length === 0) {
-            setError('The selected Excel file is empty.');
+            setError('The selected Excel file is empty or does not contain valid data.');
             setChartData(null);
             setLoading(false); // Hide loading state
             return;
