@@ -1,35 +1,39 @@
 /* Estilo del contenedor de inicio de sesión */
 .login-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
-  padding: 30px;
+  padding: 40px;
   background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Estilo del título de inicio de sesión */
 .login-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 /* Estilo de los grupos de entrada */
 .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .input-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #007bff;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .login-input {
@@ -37,8 +41,15 @@
   border: none;
   outline: none;
   font-size: 1rem;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
+  text-align: center; /* Centra el texto en el campo de entrada */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
 
 /* Estilo del botón de inicio de sesión */
@@ -52,7 +63,7 @@
   border-radius: 8px;
   padding: 12px 20px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
@@ -62,13 +73,14 @@
 }
 
 .login-button .fa-sign-in-alt {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 /* Estilo del mensaje de error */
 .error-message {
   color: #dc3545;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 0.9rem;
 }
 
 /* Estilo del enlace de registro */
@@ -81,9 +93,9 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 15px;
+  padding: 12px 20px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background 0.3s, box-shadow 0.3s;
 }
 

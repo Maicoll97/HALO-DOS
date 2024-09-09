@@ -1,8 +1,7 @@
-// src/components/Register.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/authService'; // Asegúrate de que authService tenga el método register
-import '../styles/common.css';
+import '../styles/common.css'; // Asegúrate de que el archivo CSS esté correctamente vinculado
 import { FaCheckCircle, FaTimesCircle, FaUser, FaPhone, FaMapMarkerAlt, FaIdCard, FaCalendarDay } from 'react-icons/fa';
 import { MdEmail, MdLock } from 'react-icons/md';
 
@@ -46,115 +45,127 @@ function Register() {
 
   return (
     <div className="register-container">
-      <h2 className="register-title">Register</h2>
-      <div className="input-group">
-        <MdEmail className="input-icon" />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <MdLock className="input-icon" />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group password-group">
-        <MdLock className="input-icon" />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          className="register-input"
-        />
-        {passwordsMatch && confirmPassword && (
-          <FaCheckCircle className="check-icon" />
-        )}
-        {password && confirmPassword && !passwordsMatch && (
-          <FaTimesCircle className="error-icon" />
-        )}
-      </div>
-      <div className="input-group">
-        <FaMapMarkerAlt className="input-icon" />
-        <input
-          type="text"
-          placeholder="City"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaMapMarkerAlt className="input-icon" />
-        <input
-          type="text"
-          placeholder="Country"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaPhone className="input-icon" />
-        <input
-          type="text"
-          placeholder="Phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaMapMarkerAlt className="input-icon" />
-        <input
-          type="text"
-          placeholder="Postal Code"
-          value={postalCode}
-          onChange={(e) => setPostalCode(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaIdCard className="input-icon" />
-        <input
-          type="text"
-          placeholder="Document Number"
-          value={documentNumber}
-          onChange={(e) => setDocumentNumber(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaUser className="input-icon" />
-        <input
-          type="text"
-          placeholder="Gender"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      <div className="input-group">
-        <FaCalendarDay className="input-icon" />
-        <input
-          type="date"
-          placeholder="Birth Date"
-          value={birthDate}
-          onChange={(e) => setBirthDate(e.target.value)}
-          className="register-input"
-        />
-      </div>
-      {error && <p className="error-message">{error}</p>}
-      <button onClick={handleRegister} className="register-button">Register</button>
+      <h2 className="register-title">Create Your Account</h2>
+      <form className="register-form">
+        <div className="input-group">
+          <MdEmail className="input-icon" />
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <MdLock className="input-icon" />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group password-group">
+          <MdLock className="input-icon" />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            className="register-input"
+            required
+          />
+          {passwordsMatch && confirmPassword && (
+            <FaCheckCircle className="check-icon" />
+          )}
+          {password && confirmPassword && !passwordsMatch && (
+            <FaTimesCircle className="error-icon" />
+          )}
+        </div>
+        <div className="input-group">
+          <FaMapMarkerAlt className="input-icon" />
+          <input
+            type="text"
+            placeholder="Country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaMapMarkerAlt className="input-icon" />
+          <input
+            type="text"
+            placeholder="City"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaPhone className="input-icon" />
+          <input
+            type="text"
+            placeholder="Phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaMapMarkerAlt className="input-icon" />
+          <input
+            type="text"
+            placeholder="Postal Code"
+            value={postalCode}
+            onChange={(e) => setPostalCode(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaIdCard className="input-icon" />
+          <input
+            type="text"
+            placeholder="Document Number"
+            value={documentNumber}
+            onChange={(e) => setDocumentNumber(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaUser className="input-icon" />
+          <input
+            type="text"
+            placeholder="Gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <FaCalendarDay className="input-icon" />
+          <input
+            type="date"
+            placeholder="Birth Date"
+            value={birthDate}
+            onChange={(e) => setBirthDate(e.target.value)}
+            className="register-input"
+            required
+          />
+        </div>
+        {error && <p className="error-message">{error}</p>}
+        <button type="button" onClick={handleRegister} className="register-button">Register</button>
+      </form>
       <div className="login-link">
         <p>
           Already have an account? <button onClick={() => navigate('/login')} className="login-button">Login here</button>

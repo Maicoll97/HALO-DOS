@@ -1,101 +1,113 @@
-/* src/styles/register.css */
+/* Estilo del contenedor de registro */
 .register-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  margin: auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
+/* Estilo del título de registro */
 .register-title {
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
 }
 
+/* Estilo de los grupos de entrada */
 .input-group {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
-  text-align: center; /* Centra el texto de las etiquetas */
+.input-group:hover, .input-group:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
 
 .input-icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: #555;
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-right: 12px;
 }
 
 .register-input {
-  width: calc(100% - 40px); /* Ajusta el ancho para dejar espacio para el icono */
-  padding: 10px 10px 10px 40px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.password-group {
-  position: relative;
-}
-
-.show-password-btn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: transparent;
+  flex: 1;
   border: none;
-  cursor: pointer;
-  color: #555;
+  outline: none;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  text-align: left;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo de los iconos de validación */
+.check-icon, .error-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
 }
 
 .check-icon {
-  color: green;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  color: #28a745;
 }
 
 .error-icon {
-  color: red;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  color: #dc3545;
 }
 
+/* Estilo del mensaje de error */
 .error-message {
-  color: red;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.register-button, .login-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.register-button:hover, .login-button:hover {
-  background-color: #0056b3;
-}
-
-.login-link {
+  color: #dc3545;
   text-align: center;
   margin-top: 10px;
+  font-size: 0.9rem;
 }
+
+/* Estilo del botón de registro */
+.register-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register-button:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+/* Fin del código */

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/dashboard.css';
-import { FaHome, FaBox, FaUsers } from 'react-icons/fa';
+import { FaHome, FaBox, FaUsers, FaChartLine } from 'react-icons/fa'; // Importa el nuevo ícono
 
 function Dashboard() {
   return (
@@ -26,6 +26,12 @@ function Dashboard() {
             <Link to="/registered-users" className="nav-link">
               <FaUsers className="nav-icon" />
               <span>Registered Users</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/statistics" className="nav-link">
+              <FaChartLine className="nav-icon" />
+              <span>Statistics</span>
             </Link>
           </li>
         </ul>
